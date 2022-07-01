@@ -15,4 +15,4 @@ ________________________________________________________________________________
 
 #cordova plugin add cordova-plugin-statusbar // manipular a barra de status
 
-<preference name="StatusBarBackgroundColor" value="#ff0000"
+<preference name="StatusBarBackgroundColor" value="#ff0000" />

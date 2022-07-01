@@ -7,7 +7,7 @@
     </author>
      <icon src="res/icon.png" />
     <preference name="SplashScreen" value="screen" />
-    <splash src="res/splash.jpg" />
+    <splash src="res/splash.jpg" />   
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
