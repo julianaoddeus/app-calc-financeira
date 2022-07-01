@@ -2,7 +2,7 @@ let salario = document.querySelector('#salario')
 
 function calcularEssecial() {    
 
-    let essencial = (salario.value * 0.5 );     
+    let essencial = (salario.value * 0.6 );     
     document.querySelector('#gastoEssencial').innerHTML = essencial
 }
 
