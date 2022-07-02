@@ -1,0 +1,22 @@
+label{
+    font-size: 10px;
+    color: #949292
+}
+
+p{
+    font-size: 12px;
+    
+}
+
+.card {
+    margin: 0 auto;
+}
+
+.imagem-grafico img {
+    width: 100%;
+    margin-top: 50px;
+}
+
+li {
+    list-style: none;
+}

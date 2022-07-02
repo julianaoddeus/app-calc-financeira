@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalcFinanceira</title>
+    <link rel="stylesheet" href="/calcfinanceira/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <main class="container ">
+        <nav lass="navbar bg-light">
+            <div class="container-fluid mb-3">
+                <img src="img/logo.jpg" alt="" style="width: 10rem;height: 4rem;">
+            </div>
+        </nav>
+        <div class="row ">
+            <div class="col m-6">
+                <input type="text" class="form-control" placeholder="R$" id="salario">
+                <label for="salario">Informe seu salário (valor líquido)</label>
+            </div>
+            <div class="col m-6">
+                <button type="text" class="form-control btn btn-danger" id="btn-calcular">Calcular</button>
+            </div>
+        </div>
+        <div class=" row ">
+            <div class="col m-6 ">
+                <div class="card border border-success textsuccess mt-5 " style="width: 10rem;height: 4rem;">
+                    <p class="card-subtitle mb-2 text-muted m-2">Gastos Fixos 55%</p>
+                    <p class="card-text" id="gastos-fixos"></p>
+                </div>
+            </div>
+            <div class="col m-6">
+                <div class="card border border-danger text-danger mt-5" style="width: 10rem;height: 4rem;">
+                    <p class="card-subtitle mb-2 text-muted m-2">Educação 5%</p>
+                    <p class="card-text" id="educacao"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card border border-info text-info mt-5 " style="width: 10rem;height: 4rem;">
+                    <p class="card-subtitle mb-2 text-muted m-2">Auto recompensa 10%</p>
+                    <p class="card-text" id="recompensa"></p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card border border-primary text-primary mt-5" style="width: 10rem;height: 4rem;">
+                    <p class="card-subtitle mb-2 text-muted m-2">Aposentadoria 10%</p>
+                    <p class="card-text" id="aposentadoria"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col m-6">
+                <div class="card border border-warning text-warning mt-5 " style="width: 10rem;height: 4rem;">
+                    <p class="card-subtitle mb-2 text-muted m-2">Metas 20%</p>
+                    <p class="card-text" id="metas"></p>
+                </div>
+            </div>
+            <div class="col m-6">
+                <div class="card border border-danger text-warning mt-5 " style="width: 10rem;height: 4rem;">
+                    <button type="text" class="btn " id="btn-inserir"
+                        style="width: 10rem;height: 4rem;"><a href="inserir-gastos.html" class="card-link">Inserir</a></button>
+                    <label for="" class="form-label text-center">Inserir valores gastos</label>
+                </div>
+            </div>
+
+        </div>
+        <div class="imagem-grafico">
+            <img src="./img/gráfico.JPG" alt="">
+        </div>
+
+    </main>
+    <script src="js/appp.js"></script>
+</body>
+
+</html>
