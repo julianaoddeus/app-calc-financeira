@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.julianaoliveira.calcfinanceira" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>MePoupe</name>
+    <name>MePoupa</name>
     <description>Calculadora financeira</description>
-    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
+    <author email="juliana.odeus@hotmail.com" href="https://github.io/julianaoddeus">
         Criado por Juliana oliveira com Apache Cordova.
     </author>
      <icon src="res/icon.png" />
