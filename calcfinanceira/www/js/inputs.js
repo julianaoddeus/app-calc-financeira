@@ -11,8 +11,9 @@
 
    
     //adicionando uma classe ao li
-    tarefa.classList.add('task')
-    const conteudo = `<br><p class="content">${input}  - R$ ${valor}</p>`;
+    tarefa.classList.add('task', 'list-group-item')
+    const conteudo = `Item: ${input} - R$: ${valor}`
+    localStorage.listaContatos = novoContato;
  
     tarefa.innerHTML = conteudo;
 
@@ -20,7 +21,8 @@
     lista.appendChild(tarefa);
     //inserindo botão no campo da <li>   
     tarefa.appendChild(BotaoDeleta())
-    input.value = ' '
+    input.value = ''
+    valor.value = ''
 
 }
 
@@ -49,3 +51,16 @@ const deletarTarefa = (event) => {
 //botão novo Item
 document.querySelector('[data-form-button]').addEventListener('click', criarTarefa)
 })()
+
+function limparStorage(){
+    localStorage.clear()
+    
+  }
+  
+  
+  //Limpar localStorage
+  document.querySelector('[data-list]').addEventListener('click',() =>{
+    limparStorage()
+    
+   
+  })
