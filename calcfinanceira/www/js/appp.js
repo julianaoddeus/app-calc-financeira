@@ -7,6 +7,7 @@ document.querySelector('#btn-calcular').addEventListener('click', () => {
     recompensa()
     aposentadoria()
     metas()
+    salario.value = ''
     
 })
 

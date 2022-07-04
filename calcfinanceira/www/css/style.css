@@ -19,4 +19,20 @@ p{
 
 li {
     list-style: none;
+   
 }
+.task {
+   
+    color: #2faade;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 1rem 0;
+    margin-left: 0;
+  }
+button a {
+    text-decoration: none;
+    color: #a92121;
+}
+

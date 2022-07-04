@@ -3,59 +3,36 @@
     event.preventDefault();
 
     let lista = document.querySelector('[data-list]')
-    let input = document.querySelector('[data-form-input]').value;
+    let input = document.querySelector('[data-form-despesa]').value;
+    let valor = document.querySelector('[data-form-valor]').value;
 
     //criando li no html via DOM
     const tarefa = document.createElement('li');
 
+   
     //adicionando uma classe ao li
     tarefa.classList.add('task')
-    const conteudo = `<br><p class="list-group-item">${input}</p>`;
-
+    const conteudo = `<br><p class="content">${input}  - R$ ${valor}</p>`;
+ 
     tarefa.innerHTML = conteudo;
 
     //identificando que o li (tarefa) é filho do ul
     lista.appendChild(tarefa);
-    //inserindo botão no campo da <li>
-    tarefa.appendChild(BotaoConcluir())
+    //inserindo botão no campo da <li>   
     tarefa.appendChild(BotaoDeleta())
     input.value = ' '
 
 }
 
-const BotaoConcluir = () => {
-    //criando o botão dinâmicamente
-    const botaoConclui = document.createElement('button')
 
-    //Adicionando uma classe ao botão
-    botaoConclui.classList.add('check-button')
-    botaoConclui.innerText = 'Concluir'; // nome do botão criado
-    botaoConclui.addEventListener('click',concluirTarefa)
-    botaoConclui.classList.add('btn','btn-danger', 'm-1')
- 
 
-    return botaoConclui;
-}
-
-//Função para efeito tracejado na tarefa
-const concluirTarefa = (event) => {
-    //buscanco o evento click
-    const botatoConclui = event.target
-
-    //pegando o elemento pai que é a <li>
-    const tarefaCompleta = botatoConclui.parentElement
-
-    //colocando o efeito de rabisco na <li>
-    tarefaCompleta.classList.toggle('done')
-}
 
 const BotaoDeleta = () => {
     const botaoDeleta = document.createElement('button')
 
-    botaoDeleta.innerText = 'Deletar'
+    botaoDeleta.innerText = 'x'
     botaoDeleta.addEventListener('click', deletarTarefa)
-    botaoDeleta.classList.add('btn','btn-danger')
-   
+    botaoDeleta.classList.add('btn','btn-danger', 'btn-del')   
 
     return botaoDeleta
 }

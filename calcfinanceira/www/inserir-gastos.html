@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CalcFinanceira</title>
-    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -19,14 +19,18 @@
             </div>
         </nav>
         <div class="row">
-            <div class="col-10">
-                <input type="text" class="form-control" placeholder="inserir valores:" data-form-input>
+            <div class="col-7">
+                <input type="text" class="form-control" placeholder="tipo de despesa:" data-form-despesa>
             </div>
-            <div class="col ">
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="R$:" data-form-valor>
+            </div>
+            <div class="col-2 ">
                 <button type="text" class="btn btn-danger" data-form-button>+</button>
             </div>
         </div>
         <br>
+        
         <label for="">Gasto Mensal equivalente aos 70%</label>
         <div class="progress">
             
@@ -34,8 +38,8 @@
                 aria-valuemax="100">25%</div>
         </div>
 
-        <div class="col-12">
-            <ul class="list-group" data-list>
+        <div class="col-10 ">
+            <ul class="list-group list-group-numbered" data-list>
 
             </ul>
         </div>
