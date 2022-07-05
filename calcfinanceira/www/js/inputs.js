@@ -1,66 +1,51 @@
-(()=>{
+(() => {
     const criarTarefa = (event) => {
-    event.preventDefault();
+        event.preventDefault();
 
-    let lista = document.querySelector('[data-list]')
-    let input = document.querySelector('[data-form-despesa]').value;
-    let valor = document.querySelector('[data-form-valor]').value;
+        let lista = document.querySelector('[data-list]')
+        let input = document.querySelector('[data-form-despesa]').value;
+        let valor = document.querySelector('[data-form-valor]').value;
 
-    //criando li no html via DOM
-    const tarefa = document.createElement('li');
+        //criando li no html via DOM
+        const tarefa = document.createElement('li');
 
-   
-    //adicionando uma classe ao li
-    tarefa.classList.add('task', 'list-group-item')
-    const conteudo = `Item: ${input} - R$: ${valor}`
-    localStorage.listaContatos = novoContato;
- 
-    tarefa.innerHTML = conteudo;
-
-    //identificando que o li (tarefa) é filho do ul
-    lista.appendChild(tarefa);
-    //inserindo botão no campo da <li>   
-    tarefa.appendChild(BotaoDeleta())
-    input.value = ''
-    valor.value = ''
-
-}
+        //adicionando uma classe ao li
+        tarefa.classList.add('task', 'list-group-item', 'p-1')
+        const conteudo = `Item: ${input} - R$: ${valor}`
 
 
+        tarefa.innerHTML = conteudo;
 
+        //identificando que o li (tarefa) é filho do ul
+        lista.appendChild(tarefa);
+        //inserindo botão no campo da <li>   
+        tarefa.appendChild(BotaoDeleta()) 
+        
+        input = ''
+        valor = ''
 
-const BotaoDeleta = () => {
-    const botaoDeleta = document.createElement('button')
+    }
 
-    botaoDeleta.innerText = 'x'
-    botaoDeleta.addEventListener('click', deletarTarefa)
-    botaoDeleta.classList.add('btn','btn-danger', 'btn-del')   
+    const BotaoDeleta = () => {
+        const botaoDeleta = document.createElement('button')
 
-    return botaoDeleta
-}
+        botaoDeleta.innerText = 'x'
+        botaoDeleta.addEventListener('click', deletarTarefa)
+        botaoDeleta.classList.add('btn', 'btn-info')
 
-const deletarTarefa = (event) => {
-    const botaoDeleta = event.target
+        return botaoDeleta
+    }
 
-    const tarefaCompleta = botaoDeleta.parentElement
+    const deletarTarefa = (event) => {
+        const botaoDeleta = event.target
 
-    tarefaCompleta.remove()
+        const tarefaCompleta = botaoDeleta.parentElement
 
-    return botaoDeleta
-}
-//botão novo Item
-document.querySelector('[data-form-button]').addEventListener('click', criarTarefa)
+        tarefaCompleta.remove()
+
+        return botaoDeleta
+    }
+    //botão novo Item
+    document.querySelector('[data-form-button]').addEventListener('click', criarTarefa)
+    
 })()
-
-function limparStorage(){
-    localStorage.clear()
-    
-  }
-  
-  
-  //Limpar localStorage
-  document.querySelector('[data-list]').addEventListener('click',() =>{
-    limparStorage()
-    
-   
-  })
