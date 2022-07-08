@@ -1,83 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CalcFinanceira</title>
-    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/bootstrap-icons/font/bootstrap-icons.css" />
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-</head>
+  <body>
+    <main class="container">
+      <nav lass="navbar bg-light">
+        <div class="container-fluid mb-3">
+          <a href="index.html"
+            ><img src="img/logo.jpg" alt="" style="width: 10rem; height: 3rem"
+          /></a>
+        </div>
+      </nav>
 
-<body>
-    <main class="container ">
-        <nav lass="navbar bg-light">
-            <div class="container-fluid mb-3">
-                <a href="index.html"><img src="img/logo.jpg" alt="" style="width: 10rem;height: 3rem;"></a>
+      <label for="">Gasto Mensal equivalente aos 70%</label>
+      <div class="progress">
+        <div
+          class="progress-bar bg-success"
+          role="progressbar"
+          style="width: 25%"
+          aria-valuenow="25"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          25%
+        </div>
+      </div>
+      <br /><br />
+      <div class="d-flex start-end">
+        <h4>Registre suas despesas:</h4>
+        <!-- Button trigger modal -->
+        <button
+          type="button"
+          class="btn btn-info float-end"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          <i class="bi bi-pencil-square"></i>
+        </button>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Registre suas despesas Mensais
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
-        </nav>
-
-        <label for="">Gasto Mensal equivalente aos 70%</label>
-        <div class="progress">
-
-            <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25"
-                aria-valuemin="0" aria-valuemax="100">25%</div>
-        </div>
-        <br><br>
-        <div class="d-flex start-end">
-            <h4>Registre suas despesas:</h4>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-info float-end" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <i class="bi bi-pencil-square"></i>
-            </button>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Registre suas despesas Mensais</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-9">
-                                <input type="text" class="form-control" placeholder="tipo de despesa:"
-                                    data-form-despesa>
-                            </div>
-                            <div class="col-3">
-                                <input type="text" class="form-control" placeholder="R$:" data-form-valor>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-danger" data-form-button>Salvar</button>
-                    </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-9">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="tipo de despesa:"
+                    data-form-despesa
+                    id="despesa"
+                  />
                 </div>
+                <div class="col-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="R$:"
+                    data-form-valor
+                    id="valor"
+                  />
+                </div>
+              </div>
             </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-warning"
+                data-bs-dismiss="modal"
+              >
+                Fechar
+              </button>
+              <button type="button" class="btn btn-danger" data-form-button>
+                Salvar
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
 
+      <br />
 
-
-        <br>
-
-
-        <div class="col-12">
-            <ul class="list-group list-group-numbered" data-list>
-
-            </ul>
-        </div>
-
+      <div class="col-12">
+        <ul class="list-group list-group-numbered" data-list></ul>
+      </div>
     </main>
     <script src="js/inputs.js"></script>
     <script src="/bootstrap/dist/js/bootstrap.bundle.js"></script>
-</body>
-
+  </body>
 </html>

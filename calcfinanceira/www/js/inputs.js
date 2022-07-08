@@ -21,8 +21,7 @@
         //inserindo botão no campo da <li>   
         tarefa.appendChild(BotaoDeleta()) 
         
-        input = ''
-        valor = ''
+        limpar()       
 
     }
 
@@ -47,5 +46,12 @@
     }
     //botão novo Item
     document.querySelector('[data-form-button]').addEventListener('click', criarTarefa)
+
+    function limpar(){
+        document.querySelector('[data-form-despesa]').value = ""
+        document.querySelector('[data-form-valor]').value = ""
+       
+    }
+    
     
 })()
