@@ -35,10 +35,15 @@
         </div>
       </div>
       <br /><br />
-      <div class="d-flex start-end">
-        <h4>Registre suas despesas:</h4>
-        <!-- Button trigger modal -->
-        <button
+      <div >
+        <nav class="navbar bg-success">
+          <div class="container-fluid">
+            <h5 style="color: white; text-align: center;">Lançametos Mensal</a>
+          </div>
+        </nav>
+        <!-- Button trigger modal -->        
+      </div>
+      <button
           type="button"
           class="btn btn-info float-end"
           data-bs-toggle="modal"
@@ -46,7 +51,6 @@
         >
           <i class="bi bi-pencil-square"></i>
         </button>
-      </div>
 
       <!-- Modal -->
       <div
@@ -60,7 +64,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">
-                Registre suas despesas Mensais
+                Adicionar  transação
               </h5>
               <button
                 type="button"
@@ -94,13 +98,13 @@
             <div class="modal-footer">
               <button
                 type="button"
-                class="btn btn-warning"
+                class="btn btn-danger"
                 data-bs-dismiss="modal"
               >
-                Fechar
+              <i class="bi bi-x-lg"></i>
               </button>
-              <button type="button" class="btn btn-danger" data-form-button>
-                Salvar
+              <button type="button" class="btn btn-success" data-form-button>
+                <i class="bi bi-check-lg"></i>
               </button>
             </div>
           </div>
@@ -113,7 +117,7 @@
         <ul class="list-group list-group-numbered" data-list></ul>
       </div>
     </main>
-    <script src="js/inputs.js"></script>
+    <script src="js/inserir-gastos.js"></script>
     <script src="/bootstrap/dist/js/bootstrap.bundle.js"></script>
   </body>
 </html>
